@@ -2,7 +2,26 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          white: "rgb(245,245,245)",
+          gray: "rgb(103,104,105)",
+          blue: "rgb(1,0,91)",
+          "purple-gray": "rgb(240,238,239)",
+          "light-cream": "rgb(249,240,230)",
+          "custom-gradient":
+            "linear-gradient(180deg, rgb(249, 240, 230), rgba(249, 240, 230, 0.18) 43.048%, rgba(249, 240, 230, 0) 100%)",
+          "dark-blue": "rgb(21, 0, 91)",
+          green: "rgb(31, 173, 64)",
+        },
+        secondary: {
+          black: "rgb(0,0,0)",
+          gray: "rgb(108,108,108)",
+          blue: "rgb(42,41,150)",
+        },
+      },
+    },
   },
   plugins: [],
 };
