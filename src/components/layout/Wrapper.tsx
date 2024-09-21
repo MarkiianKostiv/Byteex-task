@@ -8,7 +8,7 @@ interface WrapperProps {
 export const Wrapper: React.FC<WrapperProps> = ({ children, bgColor }) => {
   return (
     <section
-      className={`min-h-screen overflow-hidden text-white relative ${bgColor}`}
+      className={`h-[100%] flex items-center justify-center relative ${bgColor}`}
     >
       {children}
     </section>
