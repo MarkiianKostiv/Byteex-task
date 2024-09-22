@@ -10,8 +10,6 @@ export default {
           blue: "rgb(1,0,91)",
           "purple-gray": "rgb(240,238,239)",
           "light-cream": "rgb(249,240,230)",
-          "custom-gradient":
-            "linear-gradient(180deg, rgb(249, 240, 230), rgba(249, 240, 230, 0.18) 43.048%, rgba(249, 240, 230, 0) 100%)",
           "dark-blue": "rgb(21, 0, 91)",
           green: "rgb(31, 173, 64)",
         },
@@ -20,6 +18,12 @@ export default {
           gray: "rgb(108,108,108)",
           blue: "rgb(42,41,150)",
         },
+      },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(180deg, rgb(249, 240, 229), rgba(249, 240, 229, 0.18) 43.048%, rgba(249, 240, 229, 0) 100%)",
+        "custom-gradient-2":
+          "linear-gradient(180.00deg, rgba(249, 240, 229, 0.7),rgba(249, 240, 229, 0.22) 100%)",
       },
     },
   },

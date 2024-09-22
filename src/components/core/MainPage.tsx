@@ -16,54 +16,54 @@ export const MainPage = () => {
     useTransform(scrollYProgress, [start, end], [1, 0]);
 
   return (
-    <main>
+    <main className='flex flex-col items-center justify-start w-full'>
       <Header />
 
       <motion.div
         style={{ opacity: getOpacityTransform(0, 0.1) }}
-        className='h-screen will-change-transform'
+        className='will-change-transform w-full'
       >
         <IntroSection />
       </motion.div>
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.1, 0.2) }}
-        className='h-screen will-change-transform'
+        className='h-screen will-change-transform w-full'
       >
         <LoungewearSection />
       </motion.div>
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.2, 0.3) }}
-        className='h-screen will-change-transform'
+        className='h-screen will-change-transform w-full'
       >
         <FounderBioSection />
       </motion.div>
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.3, 0.4) }}
-        className='h-screen will-change-transform'
+        className='h-screen will-change-transform w-full'
       >
         <BenefitsSection />
       </motion.div>
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.4, 0.5) }}
-        className='h-screen will-change-transform'
+        className='h-screen will-change-transform w-full'
       >
         <FansFeatBackSection />
       </motion.div>
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.5, 0.6) }}
-        className='h-screen will-change-transform'
+        className='h-screen will-change-transform w-full'
       >
         <QuestionsSection />
       </motion.div>
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.6, 0.7) }}
-        className='h-screen will-change-transform'
+        className='h-screen will-change-transform w-full'
       >
         <ImpactSection />
       </motion.div>
