@@ -10,7 +10,6 @@ export const Button = () => {
                   hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 active:shadow-none`}
       initial='hidden'
       animate='visible'
-      // variants={fadeInUp}
       transition={{ duration: 0.5, delay: 0.7 }}
     >
       Customize Your Outfit
