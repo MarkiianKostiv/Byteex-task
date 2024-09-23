@@ -4,7 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/thumbs";
 import { Navigation, Thumbs } from "swiper/modules";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper as SwiperCore } from "swiper";
 import { Wrapper } from "../layout/Wrapper";
 import partner1 from "../../assets/Artboard2 1.svg";
@@ -14,12 +14,36 @@ import partner4 from "../../assets/Artboard5 1.svg";
 import partner5 from "../../assets/Artboard6 1.svg";
 import { Icon } from "../ui/Icon";
 import { Button } from "../ui/Button";
+import { motion } from "framer-motion";
 
 export const LoungewearSection = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("loungewear-section");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 1.5) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Wrapper bgColor='bg-custom-gradient'>
-      <div className='h-[100%] w-full flex flex-col items-center justify-start pb-[90px]'>
+      <motion.div
+        id='loungewear-section'
+        initial={{ opacity: 0, y: 50 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+        className='h-[100%] w-full flex flex-col items-center justify-start pb-[90px]'
+      >
         <div className='flex flex-col  items-center justify-center w-full pt-[77px] pb-[60px] lg:pb-[100px]'>
           <h4 className='text-primary-gray font-normal text-xl mb-4'>
             as seen in
@@ -209,7 +233,7 @@ export const LoungewearSection = () => {
         <div className='static lg:hidden'>
           <Button />
         </div>
-      </div>
+      </motion.div>
     </Wrapper>
   );
 };

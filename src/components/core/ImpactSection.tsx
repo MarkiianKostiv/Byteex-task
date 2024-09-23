@@ -43,7 +43,6 @@ export const ImpactSection = () => {
             Our total green impact
           </h3>
           <div className='flex items-center justify-center gap-[40px] flex-wrap'>
-            {/** Картки з іконками і даними */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
@@ -115,7 +114,6 @@ export const ImpactSection = () => {
           </div>
 
           <div className='flex items-center justify-center relative w-full lg:w-[80%] h-[375px] lg:h-[430px]'>
-            {/* Зображення та градієнти */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
