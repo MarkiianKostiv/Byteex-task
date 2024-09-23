@@ -17,6 +17,7 @@ export default {
           black: "rgb(0,0,0)",
           gray: "rgb(108,108,108)",
           blue: "rgb(42,41,150)",
+          white: "rgb(255, 255, 255)",
         },
       },
       backgroundImage: {
