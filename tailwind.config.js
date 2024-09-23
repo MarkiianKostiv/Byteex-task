@@ -25,6 +25,8 @@ export default {
           "linear-gradient(180deg, rgb(249, 240, 229), rgba(249, 240, 229, 0.18) 43.048%, rgba(249, 240, 229, 0) 100%)",
         "custom-gradient-2":
           "linear-gradient(180.00deg, rgba(249, 240, 229, 0.7),rgba(249, 240, 229, 0.22) 100%)",
+        "custom-gradient-3":
+          "linear-gradient(360.00deg, rgb(249, 240, 229) 0%,rgba(249, 240, 229, 0.18) 43.049%,rgba(249, 240, 229, 0) 100%);",
       },
     },
   },

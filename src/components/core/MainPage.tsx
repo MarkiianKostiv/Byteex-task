@@ -1,4 +1,3 @@
-import { Footer } from "../layout/Footer";
 import { Header } from "../layout/Header";
 import { BenefitsSection } from "./BenefitsSection";
 import { FansFeatBackSection } from "./FansFeatBackSection";
@@ -26,8 +25,6 @@ export const MainPage = () => {
       <QuestionsSection />
 
       <ImpactSection />
-
-      <Footer />
     </main>
   );
 };
