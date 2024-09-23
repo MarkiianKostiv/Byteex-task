@@ -19,19 +19,19 @@ export const MainPage = () => {
     <main className='flex flex-col items-center justify-start w-full'>
       <Header />
 
-      <motion.div
+      {/* <motion.div
         style={{ opacity: getOpacityTransform(0, 0.1) }}
         className='will-change-transform w-full'
-      >
-        <IntroSection />
-      </motion.div>
+      > */}
+      <IntroSection />
+      {/* </motion.div> */}
 
-      <motion.div
+      {/* <motion.div
         style={{ opacity: getOpacityTransform(0.1, 0.2) }}
         className='h-screen will-change-transform w-full'
-      >
-        <LoungewearSection />
-      </motion.div>
+      > */}
+      <LoungewearSection />
+      {/* </motion.div> */}
 
       <motion.div
         style={{ opacity: getOpacityTransform(0.2, 0.3) }}

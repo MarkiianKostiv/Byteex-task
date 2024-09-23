@@ -13,7 +13,7 @@ export const Wrapper: React.FC<WrapperProps> = ({
 }) => {
   return (
     <section
-      className={`${height} flex items-center justify-center relative ${bgColor}`}
+      className={`${height} flex w-full items-center justify-center relative ${bgColor}`}
     >
       {children}
     </section>
