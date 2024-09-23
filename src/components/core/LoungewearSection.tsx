@@ -169,8 +169,8 @@ export const LoungewearSection = () => {
                 spaceBetween={10}
                 pagination={false}
               >
-                {Array.from({ length: 8 }).map((_) => (
-                  <SwiperSlide>
+                {Array.from({ length: 8 }).map((_, index) => (
+                  <SwiperSlide key={index}>
                     <img
                       src='https://res.cloudinary.com/dudiful8w/image/upload/fl_preserve_transparency/v1727015946/Group_4445_hx4ycn.jpg?_s=public-apps'
                       alt='Image 1'
