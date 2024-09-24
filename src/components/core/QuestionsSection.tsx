@@ -30,7 +30,7 @@ export const QuestionsSection = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
-        className={`w-full px-[44px] flex items-center lg:items-start justify-center lg:justify-between pt-[111px] lg:pl-[130px] lg:pr-[80px]  
+        className={`w-full px-[44px] flex items-center lg:items-start justify-center pb-[88px] lg:justify-between pt-[111px] lg:pl-[130px] lg:pr-[80px]  
           xl:pl-[210px] xl:pr-[110px] gap-[88px]`}
       >
         <div className='w-full lg:w-[60%]'>

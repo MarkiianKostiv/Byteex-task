@@ -211,7 +211,7 @@ export const LoungewearSection = () => {
                 onSwiper={setThumbsSwiper}
                 slidesPerView={8}
                 spaceBetween={10}
-                className='absolute h-[390px] lg:h-[570px] w-[260px] lg:w-[90%] flex items-end justify-center lg:justify-start'
+                className='absolute h-[390px] lg:h-[570px] w-[260px] lg:w-[90%] xl:w-[70%] flex items-end justify-center lg:justify-start'
                 watchSlidesProgress
               >
                 {Array.from({ length: 8 }).map((_, index) => (
