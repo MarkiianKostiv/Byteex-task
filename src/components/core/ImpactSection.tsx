@@ -106,10 +106,13 @@ export const ImpactSection = () => {
             <h3 className='text-center text-primary-blue font-normal text-3xl mb-6'>
               Find something you love.
             </h3>
-            <p className='text-center text-primary-gray font-normal text-sm mb-12 w-[35%]'>
+            <p className='text-center text-primary-gray font-normal text-sm mb-12 hidden sm:inline w-[35%]'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et
               felis finibus consequat.
+            </p>
+            <p className='text-center text-primary-gray font-normal px-[25px] text-sm sm:hidden'>
+              Click below to browse our collection!
             </p>
           </div>
 
@@ -126,7 +129,8 @@ export const ImpactSection = () => {
               transition={{ duration: 0.8, delay: 1.4 }}
               src='https://res.cloudinary.com/dudiful8w/image/upload/v1727092785/Group_4441_gqs0ya.png'
               alt=''
-              className='w-[150px] h-[300px] absolute left-[60px] sm:left-[100px] md:left-[150px] lg:left-[350px]'
+              className={`w-[150px] h-[300px] absolute left-[60px] sm:left-[100px] 
+                md:left-[150px] lg:left-[350px] object-cover`}
             />
             <motion.img
               initial={{ opacity: 0, scale: 0.8 }}
@@ -134,7 +138,8 @@ export const ImpactSection = () => {
               transition={{ duration: 0.8, delay: 1.6 }}
               src='https://res.cloudinary.com/dudiful8w/image/upload/v1727097587/Group_4447_lf2f7u.png'
               alt=''
-              className='w-[130px] h-[250px] sm:w-[160px] sm:h-[280px] md:w-[185px] md:h-[330px] lg:w-[285px] lg:h-[430px] absolute z-20'
+              className={`w-[130px] h-[250px] sm:w-[160px] sm:h-[280px] md:w-[185px] md:h-[330px] 
+                lg:w-[285px] lg:h-[430px] absolute z-20 object-cover`}
             />
             <motion.img
               initial={{ opacity: 0, scale: 0.8 }}
@@ -142,7 +147,8 @@ export const ImpactSection = () => {
               transition={{ duration: 0.8, delay: 1.8 }}
               src='https://res.cloudinary.com/dudiful8w/image/upload/v1727093060/Group_4440_fnglcu.png'
               alt=''
-              className='w-[150px] h-[300px] absolute right-[60px] sm:right-[100px] md:right-[150px] lg:right-[350px] z-10'
+              className={`w-[150px] h-[300px] absolute right-[60px] sm:right-[100px] 
+                md:right-[150px] lg:right-[350px] z-10 object-cover `}
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -154,7 +160,7 @@ export const ImpactSection = () => {
 
           <div className='mt-0 flex flex-col items-center justify-center sm:mt-[60px]'>
             <Button />
-            <div className='flex items-start justify-center mt-2 gap-5'>
+            <div className='hidden sm:flex items-start justify-center mt-2 gap-5'>
               <div className='flex items-start justify-center gap-2 border-r-2 pr-5 border-r-[rgba(196,196,196,0.5)]'>
                 <Icon
                   name='cart'
@@ -166,6 +172,27 @@ export const ImpactSection = () => {
                 src={bankingIcons}
                 alt='banking icons'
               />
+            </div>
+            <div className='flex sm:hidden'>
+              <motion.div
+                className='flex gap-4 items-center justify-center mt-3'
+                initial={{ opacity: 0, y: 50 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <div className='flex'>
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Icon
+                      key={index}
+                      name='star'
+                      strokeColor='rgb(255, 184, 1)'
+                    />
+                  ))}
+                </div>
+                <p className='text-secondary-gray text-sm font-normal'>
+                  Over 500+ 5 Star Reviews Online
+                </p>
+              </motion.div>
             </div>
             <Footer />
           </div>

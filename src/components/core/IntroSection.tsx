@@ -16,33 +16,33 @@ export const IntroSection = () => {
     >
       <div className='h-[100%] w-full flex flex-col items-center justify-start pb-[162px]'>
         <motion.div
-          className='flex items-start justify-start w-full'
+          className='flex items-start justify-center lg:justify-start w-full'
           initial='hidden'
           animate='visible'
           variants={fadeInUp}
           transition={{ duration: 0.5 }}
         >
           <img
-            className='ml-24 mt-9 mb-[61px]'
+            className=' ml-0 lg:ml-24 mt-4 mb-4 lg:mt-9 lg:mb-[61px]'
             src={Logo}
             alt='Byteex Logo'
           />
         </motion.div>
         <motion.div
-          className='flex flex-col items-start justify-center w-full px-[62px]'
+          className='flex flex-col items-center lg:items-start justify-center w-full px-[30px] sm:px-[62px]'
           initial='hidden'
           animate='visible'
           variants={fadeInUp}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h3 className='mb-6 text-4xl font-normal text-primary-blue w-[450px]'>
+          <h3 className='mb-6 text-xl sm:text-4xl text-center lg:text-left font-normal text-primary-blue w-full sm:w-[450px]'>
             Don’t apologize for being comfortable.
           </h3>
-          <div className='flex items-center justify-between w-full'>
-            <aside className='w-[30%]'>
-              <ul>
+          <div className='flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between w-full'>
+            <aside className='w-[100%] flex flex-col items-center justify-center lg:w-[30%]'>
+              <ul className='w-[90%] sm:w-[50%] lg:w-full mt-[22px] lg:mt-0'>
                 <motion.li
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 justify-center'
                   initial='hidden'
                   animate='visible'
                   variants={fadeInUp}
@@ -94,7 +94,7 @@ export const IntroSection = () => {
                 </motion.li>
               </ul>
               <motion.button
-                className={`mt-[39px] bg-primary-blue text-white flex items-center 
+                className={`mt-[29px] lg:mt-[39px] bg-primary-blue text-white flex items-center 
                   justify-between gap-4 font-normal text-lg py-4 px-10 rounded-md
                   transition-transform duration-300 ease-in-out
                   hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 active:shadow-none`}
@@ -110,24 +110,24 @@ export const IntroSection = () => {
                 />
               </motion.button>
             </aside>
-            <div className='flex items-center justify-center relative w-[70%]'>
-              <div className='bg-custom-gradient-2 w-[135px] h-[190px] absolute left-[150px]'></div>
+            <div className='flex items-center justify-center relative w-[50%] lg:w-[70%]'>
+              <div className='bg-custom-gradient-2 w-[70px] h-[100px] sm:w-[135px] sm:h-[190px] absolute left-[170px] sm:left-[150px]'></div>
               <img
                 src='https://res.cloudinary.com/dudiful8w/image/upload/v1727015946/Group_4535_lajjoy.jpg'
                 alt=''
-                className='w-[210px] h-[230px] absolute left-[200px]'
+                className={`w-[110px] h-[165px] sm:w-[210px] sm:h-[230px] absolute left-[120px] sm:left-[200px] object-cover`}
               />
               <img
                 src='https://res.cloudinary.com/dudiful8w/image/upload/fl_preserve_transparency/v1727015946/Group_4445_hx4ycn.jpg?_s=public-apps'
                 alt=''
-                className='w-[285px] h-[430px] absolute z-20'
+                className={` w-[145px] h-[225px] sm:w-[285px] sm:h-[430px] lg:absolute z-20 object-cover`}
               />
               <img
                 src='https://res.cloudinary.com/dudiful8w/image/upload/v1727015946/Group_4534_uemioj.jpg'
                 alt=''
-                className='w-[210px] h-[230px] absolute right-[200px] z-10'
+                className={`w-[110px] h-[165px] sm:w-[210px] sm:h-[230px] absolute right-[120px] sm:right-[200px] z-10 object-cover`}
               />
-              <div className='bg-custom-gradient-2 w-[135px] h-[190px] absolute right-[150px]'></div>
+              <div className='bg-custom-gradient-2 w-[70px] h-[100px] sm:w-[130px] sm:h-[190px] absolute right-[170px] sm:right-[150px]'></div>
             </div>
           </div>
         </motion.div>

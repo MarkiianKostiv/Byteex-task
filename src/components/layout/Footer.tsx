@@ -2,7 +2,7 @@ import { Icon } from "../ui/Icon";
 
 export const Footer = () => {
   return (
-    <div className='w-full flex items-center justify-center mt-6 pt-[85px] gap-6'>
+    <div className='w-full hidden sm:flex items-center justify-center mt-6 pt-[85px] gap-6 flex-wrap'>
       <div className='flex w-[300px] items-center justify-center gap-3 border-r-2 pr-5 border-r-[rgba(196,196,196,0.5)]'>
         <div className='flex items-center justify-center bg-[rgba(102,102,102,0.1)] p-2 rounded-full'>
           <Icon

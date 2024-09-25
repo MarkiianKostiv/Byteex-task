@@ -36,28 +36,30 @@ export const FounderBioSection = () => {
           </h3>
         </div>
         <div className='flex flex-col lg:flex-row items-center justify-between w-full'>
-          <aside className='relative w-[700px] h-[380px] lg:h-[665px]'>
+          <aside className='relative sm:w-[500px] md:w-[600px] h-[380px] lg:h-[665px]'>
             <div className='relative flex justify-center'>
               <img
                 src='https://res.cloudinary.com/dudiful8w/image/upload/v1727015946/Group_4535_lajjoy.jpg'
                 alt='Image 1'
-                className='absolute top-[-50px] left-[175px] w-[100px] h-[107px] lg:w-[165px] lg:h-[175px] lg:top-[-80px] lg:left-[40px]'
+                className={`absolute top-[-50px] left-[-25px] sm:left-[55px] md:left-[105px] w-[100px] h-[107px] 
+                    lg:w-[165px] lg:h-[175px] lg:top-[-80px] lg:left-[40px] object-cover`}
               />
               <img
                 src='https://res.cloudinary.com/dudiful8w/image/upload/fl_preserve_transparency/v1727015946/Group_4445_hx4ycn.jpg?_s=public-apps'
                 alt='Main Image'
-                className='h-[310px] lg:h-[570px] w-[300px] lg:w-[380px]'
+                className='h-[310px] lg:h-[570px] w-[300px] lg:w-[380px] object-cover'
               />
               <img
                 src='https://res.cloudinary.com/dudiful8w/image/upload/v1727071330/Rectangle_799_jlobqd.png'
                 alt='Image 3'
-                className='absolute bottom-[-50px] right-[175px] w-[100px] h-[107px] lg:w-[165px] lg:h-[175px] lg:bottom-[-80px] lg:right-[40px]'
+                className={`absolute bottom-[-50px] right-[-25px] sm:right-[55px] md:right-[105px] w-[100px] 
+                    h-[107px] lg:w-[165px] lg:h-[175px] lg:bottom-[-80px] lg:right-[40px] object-cover`}
               />
             </div>
           </aside>
 
           <motion.div
-            className='w-[50%] flex justify-center flex-col gap-4'
+            className='w-full lg:w-[50%] flex justify-center flex-col gap-4'
             initial={{ opacity: 0, y: 50 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}

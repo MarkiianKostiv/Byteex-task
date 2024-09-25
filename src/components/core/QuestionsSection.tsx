@@ -8,6 +8,16 @@ import { faqData } from "../../lib/faqData";
 export const QuestionsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
+  const [openIndexes, setOpenIndexes] = useState(
+    Array(faqData.length).fill(false)
+  );
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndexes((prevState) =>
+      prevState.map((isOpen, i) => (i === index ? !isOpen : isOpen))
+    );
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("questions-section");
@@ -30,7 +40,8 @@ export const QuestionsSection = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
-        className={`w-full px-[44px] flex items-center lg:items-start justify-center pb-[88px] lg:justify-between pt-[111px] lg:pl-[130px] lg:pr-[80px]  
+        className={`w-full px-[29px] sm:px-[44px] flex items-center lg:items-start justify-center pb-[88px] 
+          lg:justify-between pt-[68px] sm:pt-[111px] lg:pl-[130px] lg:pr-[80px]  
           xl:pl-[210px] xl:pr-[110px] gap-[88px]`}
       >
         <div className='w-full lg:w-[60%]'>
@@ -41,13 +52,21 @@ export const QuestionsSection = () => {
             {faqData.map((faq, index) => (
               <details
                 key={index}
-                className='mb-4 border-t-2 border-t-[rgb(234,234,234)]'
+                className={`mb-4 border-t-2 border-t-[rgb(234,234,234)] ${
+                  index === faqData.length - 1
+                    ? "border-b-2 border-b-[rgb(234,234,234)] pb-4 mb-0"
+                    : ""
+                }`}
+                open={openIndexes[index]}
+                onToggle={() => toggleFAQ(index)}
               >
                 <summary
                   className={`cursor-pointer list-none text-primary-blue flex items-center justify-between`}
                 >
                   <span className='font-normal text-lg'>{faq.question}</span>
-                  <span className='text-4xl font-medium'>+</span>
+                  <span className='text-4xl font-medium'>
+                    {openIndexes[index] ? "–" : "+"}
+                  </span>
                 </summary>
                 <p className='mt-3 text-sm text-primary-gray font-normal'>
                   {faq.answer}
@@ -55,7 +74,7 @@ export const QuestionsSection = () => {
               </details>
             ))}
           </div>
-          <div className='flex lg:hidden'>
+          <div className='flex flex-col mt-10 lg:hidden'>
             <motion.div
               className='flex items-center justify-center'
               initial={{ opacity: 0, y: 50 }}
@@ -89,19 +108,19 @@ export const QuestionsSection = () => {
           <img
             src='https://res.cloudinary.com/dudiful8w/image/upload/v1727092785/Group_4441_gqs0ya.png'
             alt='model img'
-            className='absolute top-0 right-0 h-[253px] w-[167px]'
+            className='absolute top-0 right-0 h-[253px] w-[167px] object-cover'
           />
           <div className='bg-custom-gradient-2 w-[150px] h-[187px] absolute top-[50px] left-[20px]' />
           <img
             src='https://res.cloudinary.com/dudiful8w/image/upload/v1727093060/Group_4440_fnglcu.png'
             alt='model img'
-            className='h-[355px] w-[225px] z-30'
+            className='h-[355px] w-[225px] z-30 object-cover'
           />
           <div className='bg-custom-gradient-2 w-[150px] h-[187px] absolute bottom-[60px] right-[20px]' />
           <img
             src='https://res.cloudinary.com/dudiful8w/image/upload/v1727015946/Group_4534_uemioj.jpg'
             alt='model img'
-            className='absolute bottom-0 left-0 h-[159px] w-[216px]'
+            className='absolute bottom-0 left-0 h-[159px] w-[216px] object-cover'
           />
         </div>
       </motion.div>

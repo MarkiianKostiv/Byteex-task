@@ -164,13 +164,13 @@ export const LoungewearSection = () => {
           </div>
           <div className=' w-full lg:w-[40%] relative flex flex-col  '>
             <div className='relative flex items-center justify-center flex-col'>
-              <div className='swiper-button-prev-custom absolute top-[50%] left-0 lg:left-[5%] z-10'>
+              <div className='swiper-button-prev-custom absolute top-[50%] left-[-5%] sm:left-[5%] md:left-[10%] lg:left-[5%] z-10'>
                 <Icon
                   name='arrowLeft'
                   strokeColor='rgb(103, 104, 105)'
                 />
               </div>
-              <div className='swiper-button-next-custom absolute top-[50%] right-0 lg:right-[5%] z-10'>
+              <div className='swiper-button-next-custom absolute top-[50%] right-[-5%] sm:right-[5%] md:right-[10%] lg:right-[5%] z-10'>
                 <Icon
                   name='arrowRight'
                   strokeColor='rgb(103, 104, 105)'
@@ -178,7 +178,7 @@ export const LoungewearSection = () => {
               </div>
               <Swiper
                 modules={[Navigation, Thumbs]}
-                className='h-[450px] lg:h-[650px] w-[300px] lg:w-[430px] static lg:absolute'
+                className='h-[450px] lg:h-[650px] w-[280px] lg:w-[430px] static lg:absolute'
                 navigation={{
                   nextEl: ".swiper-button-next-custom",
                   prevEl: ".swiper-button-prev-custom",
@@ -198,7 +198,7 @@ export const LoungewearSection = () => {
                     <img
                       src='https://res.cloudinary.com/dudiful8w/image/upload/fl_preserve_transparency/v1727015946/Group_4445_hx4ycn.jpg?_s=public-apps'
                       alt='Image 1'
-                      className='h-[650px] w-[430px]'
+                      className='h-[650px] w-[430px] object-cover'
                     />
                   </SwiperSlide>
                 ))}
@@ -222,7 +222,7 @@ export const LoungewearSection = () => {
                     <img
                       src='https://res.cloudinary.com/dudiful8w/image/upload/v1727066408/Rectangle_798_dwmqwy.png'
                       alt={`Thumbnail ${index + 1}`}
-                      className='w-[22px] h-[22px]'
+                      className='w-[22px] h-[22px] object-cover'
                     />
                   </SwiperSlide>
                 ))}
@@ -230,8 +230,27 @@ export const LoungewearSection = () => {
             </div>
           </div>
         </div>
-        <div className='static lg:hidden'>
+        <div className='flex items-center justify-center flex-col lg:hidden'>
           <Button />
+          <motion.div
+            className='flex gap-4 items-center justify-center mt-3'
+            initial={{ opacity: 0, y: 50 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div className='flex'>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Icon
+                  key={index}
+                  name='star'
+                  strokeColor='rgb(255, 184, 1)'
+                />
+              ))}
+            </div>
+            <p className='text-secondary-gray text-sm font-normal'>
+              Over 500+ 5 Star Reviews Online
+            </p>
+          </motion.div>
         </div>
       </motion.div>
     </Wrapper>

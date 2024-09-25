@@ -110,7 +110,7 @@ export const BenefitsSection = () => {
           </div>
           <Swiper
             modules={[Navigation]}
-            className='w-[300px]  static mb-[41px]'
+            className='w-[270px] sm:w-[300px]  static mb-[41px]'
             navigation={{
               nextEl: ".swiper-button-next-custom",
               prevEl: ".swiper-button-prev-custom",
@@ -121,7 +121,7 @@ export const BenefitsSection = () => {
           >
             <SwiperSlide
               className={`bg-primary-purple-gray flex items-center justify-center 
-          flex-col gap-5 py-[60px] px-[35px] w-[350px] rounded-lg border border-1 
+          flex-col gap-5 py-[60px] px-[35px] w-[270px] sm:w-[350px] rounded-lg border border-1 
           border-solid border-[rgb(237,237,237)]`}
             >
               <Icon
