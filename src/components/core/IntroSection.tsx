@@ -2,6 +2,7 @@ import { Wrapper } from "../layout/Wrapper";
 import Logo from "../../assets/LOGO (1).svg";
 import { Icon } from "../ui/Icon";
 import { motion } from "framer-motion";
+import { Button } from "../ui/Button";
 
 export const IntroSection = () => {
   const fadeInUp = {
@@ -93,22 +94,16 @@ export const IntroSection = () => {
                   </p>
                 </motion.li>
               </ul>
-              <motion.button
-                className={`mt-[29px] lg:mt-[39px] bg-primary-blue text-white flex items-center 
-                  justify-between gap-4 font-normal text-lg py-4 px-10 rounded-md
-                  transition-transform duration-300 ease-in-out
-                  hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 active:shadow-none`}
+
+              <motion.div
+                className='mt-[29px] lg:mt-[39px]'
                 initial='hidden'
                 animate='visible'
                 variants={fadeInUp}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                Customize Your Outfit
-                <Icon
-                  name='arrow'
-                  strokeColor='white'
-                />
-              </motion.button>
+                <Button />
+              </motion.div>
             </aside>
             <div className='flex items-center justify-center relative w-[50%] lg:w-[70%]'>
               <div className='bg-custom-gradient-2 w-[70px] h-[100px] sm:w-[135px] sm:h-[190px] absolute left-[170px] sm:left-[150px]'></div>

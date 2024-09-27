@@ -102,13 +102,13 @@ export const FansFeatBackSection = () => {
         </Swiper>
 
         <div className='relative flex items-center justify-center flex-col mt-[75px]'>
-          <div className='swiper-button-prev-custom absolute top-[35%] sm:top-[50%] left-0 sm:left-[-5%] z-10'>
+          <div className='swiper-button-prev-custom absolute top-[35%] sm:top-[50%] left-[-30px] sm:left-[-5%] z-10'>
             <Icon
               name='arrowLeft'
               strokeColor='rgb(103, 104, 105)'
             />
           </div>
-          <div className='swiper-button-next-custom absolute top-[35%] sm:top-[50%] right-0 sm:right-[-5%] z-10'>
+          <div className='swiper-button-next-custom absolute top-[35%] sm:top-[50%] right-[-30px] sm:right-[-5%] z-10'>
             <Icon
               name='arrowRight'
               strokeColor='rgb(103, 104, 105)'
@@ -142,7 +142,7 @@ export const FansFeatBackSection = () => {
               640: {
                 slidesPerView: 1,
                 spaceBetween: 10,
-                pagination: false,
+                pagination: true,
               },
 
               0: {
@@ -191,33 +191,34 @@ export const FansFeatBackSection = () => {
                 </motion.div>
               </SwiperSlide>
             ))}
-            <div className='flex items-center flex-row justify-center relative'>
-              <div className='swiper-pagination  mt-4 top-[10%]' />
-            </div>
+            <div className='swiper-pagination mt-4 top-[10%] z-20' />
           </Swiper>
+        </div>
+        {/* <div className='flex items-center flex-row justify-center relative'> */}
+        <div className='swiper-pagination mt-4 top-[10%] z-20' />
+        {/* </div> */}
 
-          <div className='flex items-center justify-center flex-col sm:hidden'>
-            <Button />
-            <motion.div
-              className='flex gap-4 items-center justify-center mt-3'
-              initial={{ opacity: 0, y: 50 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <div className='flex'>
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <Icon
-                    key={index}
-                    name='star'
-                    strokeColor='rgb(255, 184, 1)'
-                  />
-                ))}
-              </div>
-              <p className='text-secondary-gray text-sm font-normal'>
-                Over 500+ 5 Star Reviews Online
-              </p>
-            </motion.div>
-          </div>
+        <div className='flex items-center justify-center flex-col sm:hidden'>
+          <Button />
+          <motion.div
+            className='flex gap-4 items-center justify-center mt-3'
+            initial={{ opacity: 0, y: 50 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div className='flex'>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Icon
+                  key={index}
+                  name='star'
+                  strokeColor='rgb(255, 184, 1)'
+                />
+              ))}
+            </div>
+            <p className='text-secondary-gray text-sm font-normal'>
+              Over 500+ 5 Star Reviews Online
+            </p>
+          </motion.div>
         </div>
       </motion.div>
     </Wrapper>

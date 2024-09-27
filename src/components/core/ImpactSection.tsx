@@ -42,12 +42,14 @@ export const ImpactSection = () => {
           <h3 className='text-primary-dark-blue font-normal text-2xl mb-[18px]'>
             Our total green impact
           </h3>
-          <div className='flex items-center justify-center gap-[40px] flex-wrap'>
+          <div className='flex w-full px-[60px] sm:px-0 sm:w-auto flex-col sm:flex-row items-center justify-center gap-[40px] flex-wrap'>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className='flex flex-col items-center justify-center pr-9 border-r-2 border-r-[rgba(196,196,196,0.5)]'
+              className={`flex flex-col items-center justify-center sm:pr-9 w-full sm:w-auto
+                border-b-2 border-b-[rgba(196,196,196,0.5)] sm:border-b-0  pb-[16px] sm:pb-0
+                sm:border-r-2 sm:border-r-[rgba(196,196,196,0.5)]`}
             >
               <div className='flex items-center justify-center bg-[rgb(228,228,228)] p-2 rounded-full'>
                 <Icon name='cart' />
@@ -64,7 +66,9 @@ export const ImpactSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className='flex flex-col items-center justify-center pr-9 border-r-2 border-r-[rgba(196,196,196,0.5)]'
+              className={`flex flex-col items-center justify-center pb-[16px] sm:pb-0 sm:pr-9 w-full sm:w-auto
+                border-b-2 border-b-[rgba(196,196,196,0.5)] sm:border-b-0 
+                sm:border-r-2 sm:border-r-[rgba(196,196,196,0.5)]`}
             >
               <div className='flex items-center justify-center bg-[rgb(228,228,228)] p-2 rounded-full'>
                 <Icon name='water' />
@@ -81,7 +85,7 @@ export const ImpactSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className='flex flex-col items-center justify-center pr-9'
+              className='hidden sm:flex flex-col items-center justify-center pr-9'
             >
               <div className='flex items-center justify-center bg-[rgb(228,228,228)] p-2 rounded-full'>
                 <Icon name='lightning' />
@@ -121,7 +125,8 @@ export const ImpactSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className='bg-custom-gradient-2 w-[100px] h-[150px] absolute left-[20px] sm:left-[50px] md:left-[100px] lg:left-[300px]'
+              className={`bg-custom-gradient-2 w-[65px] h-[95px] lg:w-[100px] lg:h-[150px] absolute left-[20px] 
+                sm:left-[50px] md:left-[100px] lg:left-[300px]`}
             ></motion.div>
             <motion.img
               initial={{ opacity: 0, scale: 0.8 }}
@@ -129,7 +134,7 @@ export const ImpactSection = () => {
               transition={{ duration: 0.8, delay: 1.4 }}
               src='https://res.cloudinary.com/dudiful8w/image/upload/v1727092785/Group_4441_gqs0ya.png'
               alt=''
-              className={`w-[150px] h-[300px] absolute left-[60px] sm:left-[100px] 
+              className={`w-[105px] h-[150px] lg:w-[150px] lg:h-[300px] absolute left-[60px] sm:left-[100px] 
                 md:left-[150px] lg:left-[350px] object-cover`}
             />
             <motion.img
@@ -147,14 +152,15 @@ export const ImpactSection = () => {
               transition={{ duration: 0.8, delay: 1.8 }}
               src='https://res.cloudinary.com/dudiful8w/image/upload/v1727093060/Group_4440_fnglcu.png'
               alt=''
-              className={`w-[150px] h-[300px] absolute right-[60px] sm:right-[100px] 
+              className={`w-[105px] h-[150px] lg:w-[150px] lg:h-[300px] absolute right-[60px] sm:right-[100px] 
                 md:right-[150px] lg:right-[350px] z-10 object-cover `}
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isVisible ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 2 }}
-              className='bg-custom-gradient-2 w-[100px] h-[150px] absolute right-[20px] sm:right-[50px] md:right-[100px] lg:right-[300px]'
+              className={`bg-custom-gradient-2 w-[65px] h-[95px] lg:w-[100px] lg:h-[150px] absolute 
+                right-[20px] sm:right-[50px] md:right-[100px] lg:right-[300px]`}
             ></motion.div>
           </div>
 

@@ -48,7 +48,7 @@ export const LoungewearSection = () => {
           <h4 className='text-primary-gray font-normal text-xl mb-4'>
             as seen in
           </h4>
-          <div className='flex items-center justify-center gap-5 flex-wrap'>
+          <div className='hidden sm:flex items-center justify-center gap-5 flex-wrap'>
             <img
               src={partner1}
               alt='partner logo'
@@ -70,6 +70,43 @@ export const LoungewearSection = () => {
               alt='partner logo'
             />
           </div>
+          <Swiper
+            className='flex sm:hidden items-center justify-center w-[90%]'
+            slidesPerView={3}
+            spaceBetween={10}
+            pagination={true}
+          >
+            <SwiperSlide>
+              <img
+                src={partner1}
+                alt='partner logo'
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={partner2}
+                alt='partner logo'
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={partner3}
+                alt='partner logo'
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={partner4}
+                alt='partner logo'
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={partner5}
+                alt='partner logo'
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className='flex items-center justify-center lg:justify-start w-full lg:pl-[70px] pb-[25px] lg:pb-[75px]'>
           <h3 className='text-primary-blue font-normal text-4xl text-center'>
